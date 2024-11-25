@@ -1,0 +1,235 @@
+/* General reset for margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Main container */
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading section */
+/* Header Styling */
+.header {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space out elements */
+  padding: 20px;
+  background-color: #006BB8;
+  color: white;
+  border-bottom: 2px solid #ddd;
+  height: 80px;
+}
+
+/* Logo Styling */
+.logo {
+  width: 100px; /* Adjust the size of the logo */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: -50px; /*Add spacing between logo and title */
+}
+
+/* Title Styling */
+.header h2 {
+  flex: 1; /* Take available space for centering */
+  text-align: center; /* Center the title text */
+  margin: 0; /* Remove default margin */
+  font-size: 2rem; /* Adjust font size as needed */
+  font-weight: bold; /* Bold for emphasis */
+}
+
+/* Content layout */
+.main-content {
+  display: flex;
+  flex: 1;
+  height: calc(100vh - 80px); /* Full height minus header height */
+}
+
+/* Navigation */
+.nav {
+  flex: 0.6; /* 3:9 ratio */
+  background-color: #f4f4f9;
+  padding: 20px;
+  border-right: 2px solid #ddd;
+}
+
+.nav button {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border: 1px solid #006BB8;
+  background-color: #f4f4f9;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  font-size: 1rem;
+  color: black;
+}
+
+.nav button.active {
+  background-color: #006BB8;
+  color: white;
+  border: 1px solid #006BB8;
+}
+
+.nav button:hover {
+  background-color: #006BB8;
+  color: white;
+}
+
+/* Content area */
+.content {
+  flex: 3; /* 3:9 ratio */
+  padding: 20px;
+  overflow-y: auto;
+  margin-left: 10px;
+}
+
+.section {
+  text-align: left;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #006BB8;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #006BB8;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  background-color: #f4f4f9;
+}
+
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table tr:hover {
+  background-color: #f1f1f1;
+}
+
+button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+
+.button-container {
+  display: flex;
+  align-items: center; /* Align the spinner vertically with the button */
+}
+
+.spinner {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  border-top-color: #000;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin-left: 10px;
+  margin-top: 0; /* Ensure spinner doesn't affect button position */
+}
+
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* SQL Query Styling */
+.sql-queries {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  white-space: pre-line; /* Preserves line breaks while formatting text */
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Additional margin for sections showing data or messages */
+.section-content {
+  margin-top: 20px;
+}
+
+/* Loader Adjustment */
+.spinner {
+  display: inline-block;
+  width: 20px; /* Adjust size for better balance */
+  height: 20px;
+  border: 3px solid rgba(0, 0, 0, 0.2);
+  border-top-color: #006BB8; /* Matches button color */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+button:disabled {
+  background-color: #aaa; /* A lighter grey for clarity */
+  color: white;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+button:disabled .spinner {
+  margin-left: 5px; /* Spinner's alignment with text */
+  display: inline-block;
+}
+
+
+
+.sql-output {
+  white-space: pre-wrap; /* Ensures that line breaks and spaces are preserved */
+  word-wrap: break-word; /* Prevents long words from breaking layout */
+  font-family: monospace; /* Monospace font for SQL */
+  background-color: #f4f4f4; /* Optional: Background color */
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc; /* Optional: Adds a border */
+}
+
+li{
+  padding: 2px;
+}
