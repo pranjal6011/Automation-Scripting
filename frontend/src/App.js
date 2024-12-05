@@ -1,5 +1,5 @@
 import React from 'react';
-import DataProvisioning from './DataProvisioning';
+import DataProvisioning from './Components/ContentSection/DataProvisioning/DataProvisioning.js';
 
 const App = () => {
   return (

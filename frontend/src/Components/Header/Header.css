@@ -1,0 +1,27 @@
+/* Header Styling */
+.header {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space out elements */
+  padding: 20px;
+  background-color: #006BB8;
+  color: white;
+  border-bottom: 2px solid #ddd;
+  height: 80px;
+}
+
+/* Logo Styling */
+.logo {
+  width: 100px; /* Adjust the size of the logo */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: -50px; /*Add spacing between logo and title */
+}
+
+/* Title Styling */
+.header h2 {
+  flex: 1; /* Take available space for centering */
+  text-align: center; /* Center the title text */
+  margin: 0; /* Remove default margin */
+  font-size: 2rem; /* Adjust font size as needed */
+  font-weight: bold; /* Bold for emphasis */
+}

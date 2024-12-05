@@ -6,8 +6,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "frontend": "cd frontend && npm start",
     "backend": "cd backend && npm start",
-    "start": "concurrently \"npm run frontend\" \"npm run backend\""
-
+    "start": "concurrently \"npm run frontend\" \"npm run backend\"",
+    "postinstall": "cd backend && npm install && cd ../frontend && npm install && cd .."
   },
   "keywords": [],
   "author": "",
