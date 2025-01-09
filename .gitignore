@@ -8,3 +8,6 @@ backend/node_modules/
 **/node_modules/
 
 backend/.env
+
+backend/config/environment.js
+frontend/src/config.js

@@ -1,12 +1,11 @@
 'use strict';
 const express = require('express');
-const dotenv = require('dotenv');
 const cors = require('cors');
+const env= require('./config/environment');
 
-dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = env.PORT || 5000;
 // Enable CORS
 const corsOptions = {
     origin: '*', // Allow requests from any origin

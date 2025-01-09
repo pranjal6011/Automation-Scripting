@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import API_BASE_URL from '../../../config';
 
 const VirtualTable = () => {
   const [virtualTableStatus, setVirtualTableStatus] = useState(null);
@@ -10,7 +11,7 @@ const VirtualTable = () => {
     setLoadingVirtualTable(true);
 
     try {
-      const response = await fetch('http://localhost:5000/target/create-virtual-table');
+      const response = await fetch(`${API_BASE_URL}/target/create-virtual-table`);
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }

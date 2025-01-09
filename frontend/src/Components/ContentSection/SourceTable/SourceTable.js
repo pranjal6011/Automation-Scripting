@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './SourceTable.css';
+import API_BASE_URL from '../../../config';
 
 const SourceTable = () => {
   const [sourceStatus, setSourceStatus] = useState(null);
@@ -12,7 +13,7 @@ const SourceTable = () => {
     setLoadingSource(true);
 
     try {
-      const response = await fetch('http://localhost:5000/source/create-source-table');
+      const response = await fetch(`${API_BASE_URL}/source/create-source-table`);
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }

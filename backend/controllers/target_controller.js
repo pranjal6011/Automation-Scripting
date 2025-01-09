@@ -1,13 +1,13 @@
 const { exec } = require('child_process');
 const connection = require('../config/connectionPRIMARY');
 const { performance } = require('perf_hooks');
-require('dotenv').config();
+const env= require('../config/environment');
 
-const SOURCEschemaName = process.env.SECONDARY_SCHEMA;
-const TARGETschemaName = process.env.PRIMARY_SCHEMA;
-const SOURCEtableName = process.env.SECONDARY_TABLE;
-const TARGETtableName = process.env.PRIMARY_TABLE;
-const remoteSource = process.env.REMOTE_SOURCE_NAME; // Remote SOURCE name
+const SOURCEschemaName = env.SECONDARY_SCHEMA;
+const TARGETschemaName = env.PRIMARY_SCHEMA;
+const SOURCEtableName = env.SECONDARY_TABLE;
+const TARGETtableName = env.PRIMARY_TABLE;
+const remoteSource = env.REMOTE_SOURCE_NAME; // Remote SOURCE name
 
 // Function to check if a schema exists
 async function checkSchemaExists(schemaName) {

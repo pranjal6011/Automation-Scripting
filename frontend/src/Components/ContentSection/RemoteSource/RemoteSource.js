@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './RemoteSources.css';
+import API_BASE_URL from '../../../config';
 const RemoteSource = () => {
   const [remoteSourceStatus, setRemoteSourceStatus] = useState([]);
   const [errorSources, setErrorSources] = useState([]);
@@ -11,7 +12,7 @@ const RemoteSource = () => {
     setLoadingRemoteSource(true);
 
     try {
-      const response = await fetch('http://localhost:5000/remote/check-remote-sources');
+      const response = await fetch(`${API_BASE_URL}/remote/check-remote-sources`);
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }

@@ -1,0 +1,12 @@
+---
+applications:
+  - name: Data_Provisioning_Frontend
+    memory: 1G
+    disk_quota: 1G
+    instances: 1
+    buildpacks:
+      - nodejs_buildpack
+    path: .
+    routes:
+      - route: Deepquery_UI.cfapps.sap.hana.ondemand.com
+    command: npm start

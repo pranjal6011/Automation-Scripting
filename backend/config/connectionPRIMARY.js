@@ -1,11 +1,11 @@
 'use strict';
 var hana = require('@sap/hana-client');
-require('dotenv').config();
+const env= require('./environment');
 
 var connOptions = {
-    serverNode:process.env.PRIMARY_HOST,
-    UID: process.env.UID,
-    PWD: process.env.PWD,
+    serverNode:env.PRIMARY_HOST,
+    UID: env.UID,
+    PWD: env.PWD,
 
     sslValidateCertificate: 'false',
 };

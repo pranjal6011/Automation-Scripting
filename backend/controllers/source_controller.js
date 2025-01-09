@@ -1,11 +1,10 @@
-const dotenv = require('dotenv');
 const connection = require('../config/connectionSECONDARY');
 const { performance } = require('perf_hooks');
+const env= require('../config/environment');
 
-dotenv.config();
-const schemaName = process.env.SECONDARY_SCHEMA;
-const tableName = process.env.SECONDARY_TABLE;
-const procedureName = process.env.PROCEDURE_NAME;  // Procedure name
+const schemaName = env.SECONDARY_SCHEMA;
+const tableName = env.SECONDARY_TABLE;
+const procedureName =env.PROCEDURE_NAME;  // Procedure name
 // SQL Queries
 const sqlCheckSchema = `SELECT SCHEMA_NAME FROM SYS.SCHEMAS WHERE SCHEMA_NAME = '${schemaName}';`;
 const sqlCreateSchema = `CREATE SCHEMA ${schemaName};`;

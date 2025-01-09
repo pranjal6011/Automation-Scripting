@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './PSECertificate.css';
+import API_BASE_URL from '../../../config';
 
 const PSECertificate = () => {
   const [pseDetails, setPseDetails] = useState([]);
@@ -12,7 +13,7 @@ const PSECertificate = () => {
     setLoadingPSE(true);
 
     try {
-      const response = await fetch('http://localhost:5000/pse/check-pse-status');
+      const response = await fetch(`${API_BASE_URL}/pse/check-pse-status`);
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
