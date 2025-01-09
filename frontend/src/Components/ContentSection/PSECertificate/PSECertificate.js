@@ -47,7 +47,7 @@ const PSECertificate = () => {
       )}
       {pseDetails.length > 0 && (
         <div>
-          <h4>PSE Certificate Details:</h4>
+          <h4>PSE Certificate Details (Primary Tenant):</h4>
           <table>
             <thead>
               <tr>

@@ -94,7 +94,7 @@ module.exports.virtualTableCreation = async function(req, res) {
         response.push(`Execution Time: ${executionTime}`);
         // Return the response to the client
         return res.status(200).json({
-            message: "Virtual table operations completed.",
+            message: "Virtual table created successfully in Primary Tenant.",
             details: response
         });
     } catch (err) {

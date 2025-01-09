@@ -1,5 +1,5 @@
 applications:
-  - name: Data_Provisioning_Backend
+  - name: data_provisioning_backend
     memory: 1G
     disk_quota: 1G
     instances: 1

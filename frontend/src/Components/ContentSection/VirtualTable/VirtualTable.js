@@ -16,7 +16,7 @@ const VirtualTable = () => {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
       const data = await response.json();
-      setVirtualTableStatus(data.status || 'Virtual Table created successfully.');
+      setVirtualTableStatus(data.message || 'Virtual Table created successfully in Primary Tenant.');
       setVirtualTableDetails(data.details || []);
     } catch (error) {
       setVirtualTableStatus('Error creating virtual table.');

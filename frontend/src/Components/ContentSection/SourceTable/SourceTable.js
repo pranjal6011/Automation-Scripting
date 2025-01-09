@@ -18,7 +18,7 @@ const SourceTable = () => {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
       const data = await response.json();
-      setSourceStatus(data.message || 'Operation completed.');
+      setSourceStatus(data.message || 'Schema, table, and procedure creation completed successfully in Secondary Tenant.');
       setSourceDetails(data.details || []);
     } catch (error) {
       setSourceStatus('Error creating source table.');

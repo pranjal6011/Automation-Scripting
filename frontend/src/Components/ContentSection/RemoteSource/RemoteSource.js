@@ -36,7 +36,7 @@ const RemoteSource = () => {
       <hr/>
       {remoteSourceStatus.length > 0 && (
         <div>
-          <h4>Remote Source Status:</h4>
+          <h4>Remote Source Status (Primary Tenant):</h4>
           <table>
             <thead>
               <tr>

@@ -5,7 +5,7 @@ const env= require('./config/environment');
 
 
 const app = express();
-const port = env.PORT || 5000;
+const port = env.PORT || 8080;
 // Enable CORS
 const corsOptions = {
     origin: '*', // Allow requests from any origin

@@ -163,7 +163,7 @@ module.exports.sourceCreation = async function(req, res) {
         const executionTime= (t1 - t0).toFixed(2) + " ms";
         response.push(`Execution Time: ${executionTime}`);
         return res.status(200).json({
-            message: "Schema, table, and procedure creation completed successfully.",
+            message: "Schema, table, and procedure creation completed successfully in Secondary Tenant.",
             details: response,
         });
     } catch (err) {
