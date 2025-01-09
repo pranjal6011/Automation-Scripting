@@ -5,7 +5,7 @@ import './Header.css';
 const Header = () => (
   <div className="header">
     <img src={logo} alt="SAP Logo" className="logo" />
-    <h2>Data Provisioning</h2>
+    <h2>HANA Cloud Data Provisioning</h2>
   </div>
 );
 
