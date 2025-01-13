@@ -3,10 +3,10 @@ import './Navbar.css';
 
 const Navbar = ({ activeTab, onTabClick }) => {
   const tabs = [
-    { key: 'sourceTable', label: 'Source Table' },
-    { key: 'virtualTable', label: 'Virtual Table' },
     { key: 'remoteSource', label: 'Remote Source Status' },
     { key: 'pseCertificate', label: 'PSE Certificate Status' },
+    { key: 'sourceTable', label: 'Source Table' },
+    { key: 'virtualTable', label: 'Virtual Table' },
   ];
 
   return (

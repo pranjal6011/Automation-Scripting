@@ -25,3 +25,8 @@
   font-size: 2rem; /* Adjust font size as needed */
   font-weight: bold; /* Bold for emphasis */
 }
+.logout-button{
+  border: 2px solid white;
+  border-radius: 10%;
+  font-weight: bolder;
+}

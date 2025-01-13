@@ -6,5 +6,7 @@ router.use('/source', require('./sources'));
 router.use('/target', require('./targets'));
 router.use('/remote', require('./remotes'));
 router.use('/pse', require('./pses'));
+router.use('/auth', require('./authenticate'));
+
 
 module.exports = router;

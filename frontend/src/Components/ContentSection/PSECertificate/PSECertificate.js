@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './PSECertificate.css';
+import './PSECertificates.css';
 import API_BASE_URL from '../../../config';
 
 const PSECertificate = () => {
